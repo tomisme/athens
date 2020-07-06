@@ -90,14 +90,14 @@ return cljs.core.namespace(p1__55485_SHARP_);
 }));
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(mkn,"syms")){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(transforms,mk,(function (p1__55488_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(transforms,mk,(function (p1__55486_SHARP_){
 return cljs.core.symbol.cljs$core$IFn$_invoke$arity$2((function (){var or__4185__auto__ = mkns;
 if(cljs.core.truth_(or__4185__auto__)){
 return or__4185__auto__;
 } else {
-return cljs.core.namespace(p1__55488_SHARP_);
+return cljs.core.namespace(p1__55486_SHARP_);
 }
-})(),cljs.core.name(p1__55488_SHARP_));
+})(),cljs.core.name(p1__55486_SHARP_));
 }));
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(mkn,"strs")){
@@ -115,9 +115,9 @@ return transforms;
 ,cljs.core.PersistentArrayMap.EMPTY,cljs.core.keys(b__$1));
 return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(((function (transforms,ret,gmap,defaults,pvec,bents){
 return (function (bes,entry){
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p1__55489_SHARP_,p2__55490_SHARP_){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__55489_SHARP_,p2__55490_SHARP_,(function (){var fexpr__55502 = cljs.core.val(entry);
-return (fexpr__55502.cljs$core$IFn$_invoke$arity$1 ? fexpr__55502.cljs$core$IFn$_invoke$arity$1(p2__55490_SHARP_) : fexpr__55502.call(null,p2__55490_SHARP_));
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p1__55487_SHARP_,p2__55488_SHARP_){
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__55487_SHARP_,p2__55488_SHARP_,(function (){var fexpr__55502 = cljs.core.val(entry);
+return (fexpr__55502.cljs$core$IFn$_invoke$arity$1 ? fexpr__55502.cljs$core$IFn$_invoke$arity$1(p2__55488_SHARP_) : fexpr__55502.call(null,p2__55488_SHARP_));
 })());
 }),cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(bes,cljs.core.key(entry)),(function (){var fexpr__55503 = cljs.core.key(entry);
 return (fexpr__55503.cljs$core$IFn$_invoke$arity$1 ? fexpr__55503.cljs$core$IFn$_invoke$arity$1(bes) : fexpr__55503.call(null,bes));

@@ -274,12 +274,12 @@ return sablono.interpreter.interpret_seq(x);
 });
 goog.object.set(sablono.interpreter.IInterpreter,"null",true);
 
-var G__39698_39717 = sablono.interpreter.interpret;
-var G__39699_39718 = "null";
-var G__39700_39719 = (function (this$){
+var G__39698_39723 = sablono.interpreter.interpret;
+var G__39699_39724 = "null";
+var G__39700_39725 = (function (this$){
 return null;
 });
-goog.object.set(G__39698_39717,G__39699_39718,G__39700_39719);
+goog.object.set(G__39698_39723,G__39699_39724,G__39700_39725);
 
 (cljs.core.PersistentVector.prototype.sablono$interpreter$IInterpreter$ = cljs.core.PROTOCOL_SENTINEL);
 

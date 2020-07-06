@@ -238,14 +238,14 @@ throw cljs.core.missing_protocol("Transformer.-decoder",this$);
  */
 spec_tools.core.type_transformer = (function spec_tools$core$type_transformer(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___48196 = arguments.length;
-var i__4790__auto___48197 = (0);
+var len__4789__auto___48193 = arguments.length;
+var i__4790__auto___48194 = (0);
 while(true){
-if((i__4790__auto___48197 < len__4789__auto___48196)){
-args__4795__auto__.push((arguments[i__4790__auto___48197]));
+if((i__4790__auto___48194 < len__4789__auto___48193)){
+args__4795__auto__.push((arguments[i__4790__auto___48194]));
 
-var G__48199 = (i__4790__auto___48197 + (1));
-i__4790__auto___48197 = G__48199;
+var G__48198 = (i__4790__auto___48194 + (1));
+i__4790__auto___48194 = G__48198;
 continue;
 } else {
 }
@@ -1198,8 +1198,8 @@ var this$__$1 = this;
 var specify = (function (x){
 while(true){
 if((x instanceof cljs.core.Keyword)){
-var G__48263 = cljs.spec.alpha.get_spec(x);
-x = G__48263;
+var G__48264 = cljs.spec.alpha.get_spec(x);
+x = G__48264;
 continue;
 } else {
 if(cljs.core.truth_((spec_tools.core.spec_QMARK_.cljs$core$IFn$_invoke$arity$1 ? spec_tools.core.spec_QMARK_.cljs$core$IFn$_invoke$arity$1(x) : spec_tools.core.spec_QMARK_.call(null,x)))){
@@ -1463,8 +1463,8 @@ if(cljs.core.truth_(spec_tools.core.spec_QMARK_(x))){
 return x;
 } else {
 if((x instanceof cljs.core.Keyword)){
-var G__48274 = cljs.spec.alpha.get_spec(x);
-x = G__48274;
+var G__48281 = cljs.spec.alpha.get_spec(x);
+x = G__48281;
 continue;
 } else {
 return spec_tools.core.create_spec(new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"spec","spec",347520401),x], null));

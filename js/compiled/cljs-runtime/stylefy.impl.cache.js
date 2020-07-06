@@ -69,8 +69,8 @@ return window.localStorage.setItem(stylefy.impl.cache.cache_key_created(instance
 (stylefy.impl.cache.set_cache_created_time.cljs$lang$maxFixedArity = 2);
 
 stylefy.impl.cache.clear_styles = (function stylefy$impl$cache$clear_styles(var_args){
-var G__29543 = arguments.length;
-switch (G__29543) {
+var G__29540 = arguments.length;
+switch (G__29540) {
 case 0:
 return stylefy.impl.cache.clear_styles.cljs$core$IFn$_invoke$arity$0();
 
@@ -146,8 +146,8 @@ return null;
  *   Throws QUOTA_EXCEEDED_ERR if the storage is full.
  */
 stylefy.impl.cache.cache_styles = (function stylefy$impl$cache$cache_styles(var_args){
-var G__29549 = arguments.length;
-switch (G__29549) {
+var G__29547 = arguments.length;
+switch (G__29547) {
 case 1:
 return stylefy.impl.cache.cache_styles.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
