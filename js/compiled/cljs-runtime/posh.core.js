@@ -7,20 +7,20 @@ goog.require('posh.lib.q_analyze');
 goog.require('posh.lib.update');
 goog.require('posh.lib.db');
 goog.require('posh.lib.graph');
-posh.core.empty_tree = (function posh$core$empty_tree(p__66510,retrieve){
-var map__66511 = p__66510;
-var map__66511__$1 = (((((!((map__66511 == null))))?(((((map__66511.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66511.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66511):map__66511);
-var dcfg = map__66511__$1;
-var q = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66511__$1,new cljs.core.Keyword(null,"q","q",689001697));
-var pull = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66511__$1,new cljs.core.Keyword(null,"pull","pull",-860544805));
-var filter = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66511__$1,new cljs.core.Keyword(null,"filter","filter",-948537934));
-var entid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66511__$1,new cljs.core.Keyword(null,"entid","entid",1720688982));
-var db = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66511__$1,new cljs.core.Keyword(null,"db","db",993250759));
+posh.core.empty_tree = (function posh$core$empty_tree(p__37870,retrieve){
+var map__37871 = p__37870;
+var map__37871__$1 = (((((!((map__37871 == null))))?(((((map__37871.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37871.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37871):map__37871);
+var dcfg = map__37871__$1;
+var q = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37871__$1,new cljs.core.Keyword(null,"q","q",689001697));
+var pull = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37871__$1,new cljs.core.Keyword(null,"pull","pull",-860544805));
+var filter = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37871__$1,new cljs.core.Keyword(null,"filter","filter",-948537934));
+var entid = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37871__$1,new cljs.core.Keyword(null,"entid","entid",1720688982));
+var db = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37871__$1,new cljs.core.Keyword(null,"db","db",993250759));
 return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null,"filters","filters",974726919),new cljs.core.Keyword(null,"retrieve","retrieve",-657129560),new cljs.core.Keyword(null,"txs","txs",2056038378),new cljs.core.Keyword(null,"cache","cache",-1237023054),new cljs.core.Keyword(null,"dbs","dbs",1889628467),new cljs.core.Keyword(null,"schemas","schemas",575070579),new cljs.core.Keyword(null,"graph","graph",1558099509),new cljs.core.Keyword(null,"dcfg","dcfg",-880371016),new cljs.core.Keyword(null,"conns","conns",-1475268193)],[cljs.core.PersistentArrayMap.EMPTY,retrieve,cljs.core.PersistentArrayMap.EMPTY,cljs.core.PersistentArrayMap.EMPTY,cljs.core.PersistentArrayMap.EMPTY,cljs.core.PersistentArrayMap.EMPTY,cljs.core.PersistentArrayMap.EMPTY,dcfg,cljs.core.PersistentArrayMap.EMPTY]);
 });
 posh.core.add_db = (function posh$core$add_db(var_args){
-var G__66514 = arguments.length;
-switch (G__66514) {
+var G__37874 = arguments.length;
+switch (G__37874) {
 case 4:
 return posh.core.add_db.cljs$core$IFn$_invoke$arity$4((arguments[(0)]),(arguments[(1)]),(arguments[(2)]),(arguments[(3)]));
 
@@ -39,16 +39,16 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return posh.core.add_db.cljs$core$IFn$_invoke$arity$5(posh_tree,db_id,conn,schema,null);
 }));
 
-(posh.core.add_db.cljs$core$IFn$_invoke$arity$5 = (function (p__66516,db_id,conn,schema,base_filters){
-var map__66517 = p__66516;
-var map__66517__$1 = (((((!((map__66517 == null))))?(((((map__66517.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66517.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66517):map__66517);
-var posh_tree = map__66517__$1;
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66517__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66517__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var schemas = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66517__$1,new cljs.core.Keyword(null,"schemas","schemas",575070579));
-var dbs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66517__$1,new cljs.core.Keyword(null,"dbs","dbs",1889628467));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66517__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66517__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+(posh.core.add_db.cljs$core$IFn$_invoke$arity$5 = (function (p__37875,db_id,conn,schema,base_filters){
+var map__37876 = p__37875;
+var map__37876__$1 = (((((!((map__37876 == null))))?(((((map__37876.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37876.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37876):map__37876);
+var posh_tree = map__37876__$1;
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37876__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37876__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var schemas = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37876__$1,new cljs.core.Keyword(null,"schemas","schemas",575070579));
+var dbs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37876__$1,new cljs.core.Keyword(null,"dbs","dbs",1889628467));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37876__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37876__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
 var storage_key = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"db","db",993250759),db_id], null);
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 7, [new cljs.core.Keyword(null,"conns","conns",-1475268193),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(conns,db_id,conn),new cljs.core.Keyword(null,"schemas","schemas",575070579),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(schemas,db_id,schema),new cljs.core.Keyword(null,"filters","filters",974726919),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(new cljs.core.Keyword(null,"filters","filters",974726919).cljs$core$IFn$_invoke$arity$1(posh_tree),db_id,base_filters),new cljs.core.Keyword(null,"return","return",-1891502105),storage_key,new cljs.core.Keyword(null,"dbs","dbs",1889628467),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(dbs,db_id,posh.lib.db.generate_initial_db.cljs$core$IFn$_invoke$arity$3(dcfg,conn,base_filters)),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cache,cljs.core.PersistentArrayMap.createAsIfByAssoc([storage_key,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"pass-patterns","pass-patterns",1090887263),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentVector.EMPTY], null)], null)])], 0)),new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_full(graph,storage_key,cljs.core.PersistentVector.EMPTY,cljs.core.PersistentVector.EMPTY)], null)], 0));
 }));
@@ -56,8 +56,8 @@ return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 (posh.core.add_db.cljs$lang$maxFixedArity = 5);
 
 posh.core.set_db = (function posh$core$set_db(var_args){
-var G__66520 = arguments.length;
-switch (G__66520) {
+var G__37879 = arguments.length;
+switch (G__37879) {
 case 3:
 return posh.core.set_db.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
 
@@ -76,52 +76,52 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 return posh.core.set_db.cljs$core$IFn$_invoke$arity$4(posh_tree,db_id,db,null);
 }));
 
-(posh.core.set_db.cljs$core$IFn$_invoke$arity$4 = (function (p__66521,db_id,db,filter_pred){
-var map__66522 = p__66521;
-var map__66522__$1 = (((((!((map__66522 == null))))?(((((map__66522.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66522.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66522):map__66522);
-var posh_tree = map__66522__$1;
-var dbs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66522__$1,new cljs.core.Keyword(null,"dbs","dbs",1889628467));
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66522__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66522__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+(posh.core.set_db.cljs$core$IFn$_invoke$arity$4 = (function (p__37880,db_id,db,filter_pred){
+var map__37881 = p__37880;
+var map__37881__$1 = (((((!((map__37881 == null))))?(((((map__37881.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37881.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37881):map__37881);
+var posh_tree = map__37881__$1;
+var dbs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37881__$1,new cljs.core.Keyword(null,"dbs","dbs",1889628467));
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37881__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37881__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
 var storage_key = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"db","db",993250759),db_id], null);
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"dbs","dbs",1889628467),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(dbs,db_id,db),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cache,cljs.core.PersistentArrayMap.createAsIfByAssoc([storage_key,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"pass-patterns","pass-patterns",1090887263),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.PersistentVector.EMPTY], null)], null)])], 0)),new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_full(graph,storage_key,cljs.core.PersistentVector.EMPTY,cljs.core.PersistentVector.EMPTY)], null)], 0));
 }));
 
 (posh.core.set_db.cljs$lang$maxFixedArity = 4);
 
-posh.core.add_filter_tx = (function posh$core$add_filter_tx(p__66524,poshdb,tx_patterns){
-var map__66525 = p__66524;
-var map__66525__$1 = (((((!((map__66525 == null))))?(((((map__66525.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66525.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66525):map__66525);
-var posh_tree = map__66525__$1;
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66525__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66525__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+posh.core.add_filter_tx = (function posh$core$add_filter_tx(p__37883,poshdb,tx_patterns){
+var map__37884 = p__37883;
+var map__37884__$1 = (((((!((map__37884 == null))))?(((((map__37884.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37884.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37884):map__37884);
+var posh_tree = map__37884__$1;
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37884__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37884__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
 var storage_key = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"filter-tx","filter-tx",-1870604812),poshdb,tx_patterns], null);
 var cached = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((cljs.core.truth_(cached)?posh_tree:cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_connect(graph,storage_key,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [poshdb], null)),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cache,storage_key,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"pass-patterns","pass-patterns",1090887263),tx_patterns], null))], null)], 0))),new cljs.core.Keyword(null,"return","return",-1891502105),storage_key);
 });
-posh.core.add_filter_pull = (function posh$core$add_filter_pull(p__66527,poshdb,pull_pattern,eid){
-var map__66528 = p__66527;
-var map__66528__$1 = (((((!((map__66528 == null))))?(((((map__66528.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66528.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66528):map__66528);
-var posh_tree = map__66528__$1;
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66528__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66528__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66528__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66528__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66528__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
+posh.core.add_filter_pull = (function posh$core$add_filter_pull(p__37886,poshdb,pull_pattern,eid){
+var map__37887 = p__37886;
+var map__37887__$1 = (((((!((map__37887 == null))))?(((((map__37887.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37887.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37887):map__37887);
+var posh_tree = map__37887__$1;
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37887__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37887__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37887__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37887__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37887__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
 var storage_key = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"filter-pull","filter-pull",-32246001),poshdb,pull_pattern,eid], null);
 var cached = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((cljs.core.truth_(cached)?posh_tree:cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_connect(graph,storage_key,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [poshdb], null)),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cache,storage_key,posh.lib.update.update_filter_pull(posh_tree,storage_key))], null)], 0))),new cljs.core.Keyword(null,"return","return",-1891502105),storage_key);
 });
 posh.core.add_filter_q = (function posh$core$add_filter_q(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___66637 = arguments.length;
-var i__4790__auto___66638 = (0);
+var len__4789__auto___37956 = arguments.length;
+var i__4790__auto___37957 = (0);
 while(true){
-if((i__4790__auto___66638 < len__4789__auto___66637)){
-args__4795__auto__.push((arguments[i__4790__auto___66638]));
+if((i__4790__auto___37957 < len__4789__auto___37956)){
+args__4795__auto__.push((arguments[i__4790__auto___37957]));
 
-var G__66639 = (i__4790__auto___66638 + (1));
-i__4790__auto___66638 = G__66639;
+var G__37958 = (i__4790__auto___37957 + (1));
+i__4790__auto___37957 = G__37958;
 continue;
 } else {
 }
@@ -132,22 +132,22 @@ var argseq__4796__auto__ = ((((2) < args__4795__auto__.length))?(new cljs.core.I
 return posh.core.add_filter_q.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4796__auto__);
 });
 
-(posh.core.add_filter_q.cljs$core$IFn$_invoke$arity$variadic = (function (p__66533,query,args){
-var map__66534 = p__66533;
-var map__66534__$1 = (((((!((map__66534 == null))))?(((((map__66534.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66534.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66534):map__66534);
-var posh_tree = map__66534__$1;
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66534__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66534__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66534__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66534__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66534__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66534__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
+(posh.core.add_filter_q.cljs$core$IFn$_invoke$arity$variadic = (function (p__37892,query,args){
+var map__37893 = p__37892;
+var map__37893__$1 = (((((!((map__37893 == null))))?(((((map__37893.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37893.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37893):map__37893);
+var posh_tree = map__37893__$1;
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37893__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37893__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37893__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37893__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37893__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37893__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
 var storage_key = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"filter-q","filter-q",538431954),query,args], null);
 var cached = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((cljs.core.truth_(cached)?posh_tree:(function (){var map__66536 = posh.lib.update.update_q_with_dbvarmap(posh_tree,storage_key);
-var map__66536__$1 = (((((!((map__66536 == null))))?(((((map__66536.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66536.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66536):map__66536);
-var analysis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66536__$1,new cljs.core.Keyword(null,"analysis","analysis",-1362593389));
-var dbvarmap = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66536__$1,new cljs.core.Keyword(null,"dbvarmap","dbvarmap",491069137));
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((cljs.core.truth_(cached)?posh_tree:(function (){var map__37895 = posh.lib.update.update_q_with_dbvarmap(posh_tree,storage_key);
+var map__37895__$1 = (((((!((map__37895 == null))))?(((((map__37895.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37895.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37895):map__37895);
+var analysis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37895__$1,new cljs.core.Keyword(null,"analysis","analysis",-1362593389));
+var dbvarmap = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37895__$1,new cljs.core.Keyword(null,"dbvarmap","dbvarmap",491069137));
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_connect(graph,storage_key,cljs.core.vals(dbvarmap)),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cache,storage_key,posh.lib.update.filter_q_transform_analysis(analysis))], null)], 0));
 })()),new cljs.core.Keyword(null,"return","return",-1891502105),storage_key);
 }));
@@ -155,41 +155,41 @@ return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 (posh.core.add_filter_q.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(posh.core.add_filter_q.cljs$lang$applyTo = (function (seq66530){
-var G__66531 = cljs.core.first(seq66530);
-var seq66530__$1 = cljs.core.next(seq66530);
-var G__66532 = cljs.core.first(seq66530__$1);
-var seq66530__$2 = cljs.core.next(seq66530__$1);
+(posh.core.add_filter_q.cljs$lang$applyTo = (function (seq37889){
+var G__37890 = cljs.core.first(seq37889);
+var seq37889__$1 = cljs.core.next(seq37889);
+var G__37891 = cljs.core.first(seq37889__$1);
+var seq37889__$2 = cljs.core.next(seq37889__$1);
 var self__4776__auto__ = this;
-return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__66531,G__66532,seq66530__$2);
+return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__37890,G__37891,seq37889__$2);
 }));
 
-posh.core.add_pull = (function posh$core$add_pull(p__66538,poshdb,pull_pattern,eid){
-var map__66539 = p__66538;
-var map__66539__$1 = (((((!((map__66539 == null))))?(((((map__66539.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66539.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66539):map__66539);
-var posh_tree = map__66539__$1;
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66539__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66539__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66539__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66539__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66539__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
-var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66539__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
+posh.core.add_pull = (function posh$core$add_pull(p__37897,poshdb,pull_pattern,eid){
+var map__37898 = p__37897;
+var map__37898__$1 = (((((!((map__37898 == null))))?(((((map__37898.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37898.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37898):map__37898);
+var posh_tree = map__37898__$1;
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37898__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37898__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37898__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37898__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37898__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
+var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37898__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
 var storage_key = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"pull","pull",-860544805),poshdb,pull_pattern,eid], null);
 var cached = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((cljs.core.truth_(cached)?posh_tree:(function (){var analysis = cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"tx-t","tx-t",-1302353112),(0)], null),posh.lib.update.update_pull(posh_tree,storage_key)], 0));
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_connect(graph,storage_key,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [poshdb], null)),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cache,storage_key,analysis)], null)], 0));
 })()),new cljs.core.Keyword(null,"return","return",-1891502105),storage_key);
 });
-posh.core.add_pull_many = (function posh$core$add_pull_many(p__66541,poshdb,pull_pattern,eids){
-var map__66542 = p__66541;
-var map__66542__$1 = (((((!((map__66542 == null))))?(((((map__66542.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66542.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66542):map__66542);
-var posh_tree = map__66542__$1;
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66542__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66542__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66542__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66542__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66542__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
-var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66542__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
+posh.core.add_pull_many = (function posh$core$add_pull_many(p__37900,poshdb,pull_pattern,eids){
+var map__37901 = p__37900;
+var map__37901__$1 = (((((!((map__37901 == null))))?(((((map__37901.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37901.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37901):map__37901);
+var posh_tree = map__37901__$1;
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37901__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37901__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37901__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37901__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var conns_by_id = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37901__$1,new cljs.core.Keyword(null,"conns-by-id","conns-by-id",-369445996));
+var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37901__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
 var storage_key = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"pull-many","pull-many",217148130),poshdb,pull_pattern,eids], null);
 var cached = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((cljs.core.truth_(cached)?posh_tree:(function (){var analysis = cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"tx-t","tx-t",-1302353112),(0)], null),posh.lib.update.update_pull_many(posh_tree,storage_key)], 0));
@@ -198,14 +198,14 @@ return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 });
 posh.core.add_q = (function posh$core$add_q(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___66640 = arguments.length;
-var i__4790__auto___66641 = (0);
+var len__4789__auto___37959 = arguments.length;
+var i__4790__auto___37960 = (0);
 while(true){
-if((i__4790__auto___66641 < len__4789__auto___66640)){
-args__4795__auto__.push((arguments[i__4790__auto___66641]));
+if((i__4790__auto___37960 < len__4789__auto___37959)){
+args__4795__auto__.push((arguments[i__4790__auto___37960]));
 
-var G__66642 = (i__4790__auto___66641 + (1));
-i__4790__auto___66641 = G__66642;
+var G__37961 = (i__4790__auto___37960 + (1));
+i__4790__auto___37960 = G__37961;
 continue;
 } else {
 }
@@ -216,25 +216,25 @@ var argseq__4796__auto__ = ((((2) < args__4795__auto__.length))?(new cljs.core.I
 return posh.core.add_q.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__4796__auto__);
 });
 
-(posh.core.add_q.cljs$core$IFn$_invoke$arity$variadic = (function (p__66547,query,args){
-var map__66548 = p__66547;
-var map__66548__$1 = (((((!((map__66548 == null))))?(((((map__66548.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66548.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66548):map__66548);
-var posh_tree = map__66548__$1;
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66548__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66548__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66548__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66548__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66548__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
+(posh.core.add_q.cljs$core$IFn$_invoke$arity$variadic = (function (p__37906,query,args){
+var map__37907 = p__37906;
+var map__37907__$1 = (((((!((map__37907 == null))))?(((((map__37907.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37907.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37907):map__37907);
+var posh_tree = map__37907__$1;
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37907__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37907__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37907__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37907__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var retrieve = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37907__$1,new cljs.core.Keyword(null,"retrieve","retrieve",-657129560));
 var storage_key = new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"q","q",689001697),query,args], null);
 var cached = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3((function (){var or__4185__auto__ = cached;
 if(cljs.core.truth_(or__4185__auto__)){
 return or__4185__auto__;
 } else {
-var map__66550 = posh.lib.update.update_q_with_dbvarmap(posh_tree,storage_key);
-var map__66550__$1 = (((((!((map__66550 == null))))?(((((map__66550.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66550.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66550):map__66550);
-var analysis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66550__$1,new cljs.core.Keyword(null,"analysis","analysis",-1362593389));
-var dbvarmap = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66550__$1,new cljs.core.Keyword(null,"dbvarmap","dbvarmap",491069137));
+var map__37909 = posh.lib.update.update_q_with_dbvarmap(posh_tree,storage_key);
+var map__37909__$1 = (((((!((map__37909 == null))))?(((((map__37909.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37909.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37909):map__37909);
+var analysis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37909__$1,new cljs.core.Keyword(null,"analysis","analysis",-1362593389));
+var dbvarmap = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37909__$1,new cljs.core.Keyword(null,"dbvarmap","dbvarmap",491069137));
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([posh_tree,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.add_item_connect(graph,storage_key,cljs.core.vals(dbvarmap)),new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(cache,storage_key,analysis)], null)], 0));
 }
 })(),new cljs.core.Keyword(null,"return","return",-1891502105),storage_key);
@@ -243,35 +243,35 @@ return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 (posh.core.add_q.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(posh.core.add_q.cljs$lang$applyTo = (function (seq66544){
-var G__66545 = cljs.core.first(seq66544);
-var seq66544__$1 = cljs.core.next(seq66544);
-var G__66546 = cljs.core.first(seq66544__$1);
-var seq66544__$2 = cljs.core.next(seq66544__$1);
+(posh.core.add_q.cljs$lang$applyTo = (function (seq37903){
+var G__37904 = cljs.core.first(seq37903);
+var seq37903__$1 = cljs.core.next(seq37903);
+var G__37905 = cljs.core.first(seq37903__$1);
+var seq37903__$2 = cljs.core.next(seq37903__$1);
 var self__4776__auto__ = this;
-return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__66545,G__66546,seq66544__$2);
+return self__4776__auto__.cljs$core$IFn$_invoke$arity$variadic(G__37904,G__37905,seq37903__$2);
 }));
 
-posh.core.remove_item = (function posh$core$remove_item(p__66552,storage_key){
-var map__66553 = p__66552;
-var map__66553__$1 = (((((!((map__66553 == null))))?(((((map__66553.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66553.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66553):map__66553);
-var posh_tree = map__66553__$1;
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66553__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66553__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+posh.core.remove_item = (function posh$core$remove_item(p__37911,storage_key){
+var map__37912 = p__37911;
+var map__37912__$1 = (((((!((map__37912 == null))))?(((((map__37912.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37912.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37912):map__37912);
+var posh_tree = map__37912__$1;
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37912__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37912__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$variadic(posh_tree,new cljs.core.Keyword(null,"graph","graph",1558099509),posh.lib.graph.remove_item(graph,storage_key),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cache,storage_key)], 0));
 });
-posh.core.cache_changes = (function posh$core$cache_changes(p__66555,db_id,tx,new_cache,storage_key){
-var map__66556 = p__66555;
-var map__66556__$1 = (((((!((map__66556 == null))))?(((((map__66556.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66556.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66556):map__66556);
-var posh_tree = map__66556__$1;
-var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66556__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66556__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+posh.core.cache_changes = (function posh$core$cache_changes(p__37914,db_id,tx,new_cache,storage_key){
+var map__37915 = p__37914;
+var map__37915__$1 = (((((!((map__37915 == null))))?(((((map__37915.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37915.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37915):map__37915);
+var posh_tree = map__37915__$1;
+var graph = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37915__$1,new cljs.core.Keyword(null,"graph","graph",1558099509));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37915__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
 if(cljs.core.truth_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(new_cache,storage_key))){
 return cljs.core.PersistentArrayMap.EMPTY;
 } else {
 var current_analysis = cljs.core.get.cljs$core$IFn$_invoke$arity$2(cache,storage_key);
-var reloaded = (cljs.core.truth_(posh.lib.datom_matcher.any_datoms_match_QMARK_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"reload-patterns","reload-patterns",-1261746666).cljs$core$IFn$_invoke$arity$1(current_analysis),db_id),tx))?(function (){var fexpr__66559 = new cljs.core.Keyword(null,"reload-fn","reload-fn",-1150160860).cljs$core$IFn$_invoke$arity$1(current_analysis);
-return (fexpr__66559.cljs$core$IFn$_invoke$arity$2 ? fexpr__66559.cljs$core$IFn$_invoke$arity$2(posh_tree,storage_key) : fexpr__66559.call(null,posh_tree,storage_key));
+var reloaded = (cljs.core.truth_(posh.lib.datom_matcher.any_datoms_match_QMARK_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"reload-patterns","reload-patterns",-1261746666).cljs$core$IFn$_invoke$arity$1(current_analysis),db_id),tx))?(function (){var fexpr__37918 = new cljs.core.Keyword(null,"reload-fn","reload-fn",-1150160860).cljs$core$IFn$_invoke$arity$1(current_analysis);
+return (fexpr__37918.cljs$core$IFn$_invoke$arity$2 ? fexpr__37918.cljs$core$IFn$_invoke$arity$2(posh_tree,storage_key) : fexpr__37918.call(null,posh_tree,storage_key));
 })():null);
 var analysis = (function (){var or__4185__auto__ = reloaded;
 if(cljs.core.truth_(or__4185__auto__)){
@@ -280,9 +280,9 @@ return or__4185__auto__;
 return current_analysis;
 }
 })();
-var map__66558 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(graph,storage_key);
-var map__66558__$1 = (((((!((map__66558 == null))))?(((((map__66558.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66558.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66558):map__66558);
-var outputs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66558__$1,new cljs.core.Keyword(null,"outputs","outputs",-1896513034));
+var map__37917 = cljs.core.get.cljs$core$IFn$_invoke$arity$2(graph,storage_key);
+var map__37917__$1 = (((((!((map__37917 == null))))?(((((map__37917.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37917.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37917):map__37917);
+var outputs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37917__$1,new cljs.core.Keyword(null,"outputs","outputs",-1896513034));
 var children_cache = (function (){var temp__5735__auto__ = (((!(cljs.core.empty_QMARK_(outputs))))?(function (){var and__4174__auto__ = new cljs.core.Keyword(null,"pass-patterns","pass-patterns",1090887263).cljs$core$IFn$_invoke$arity$1(analysis);
 if(cljs.core.truth_(and__4174__auto__)){
 return posh.lib.datom_matcher.matching_datoms(new cljs.core.Keyword(null,"pass-patterns","pass-patterns",1090887263).cljs$core$IFn$_invoke$arity$1(analysis),tx);
@@ -305,12 +305,12 @@ return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.c
 posh.core.merge_txs = (function posh$core$merge_txs(oldtx,newtx){
 return cljs.core.concat.cljs$core$IFn$_invoke$arity$2(newtx,oldtx);
 });
-posh.core.add_tx = (function posh$core$add_tx(p__66561,poshdb,tx){
-var map__66562 = p__66561;
-var map__66562__$1 = (((((!((map__66562 == null))))?(((((map__66562.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66562.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66562):map__66562);
-var posh_tree = map__66562__$1;
-var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66562__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66562__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+posh.core.add_tx = (function posh$core$add_tx(p__37920,poshdb,tx){
+var map__37921 = p__37920;
+var map__37921__$1 = (((((!((map__37921 == null))))?(((((map__37921.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37921.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37921):map__37921);
+var posh_tree = map__37921__$1;
+var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37921__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37921__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
 var conn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns,posh.lib.db.poshdb__GT_db_id(poshdb));
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(posh_tree,new cljs.core.Keyword(null,"txs","txs",2056038378),cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(txs,conn,posh.core.merge_txs(cljs.core.get.cljs$core$IFn$_invoke$arity$2(txs,conn),tx)));
 });
@@ -319,36 +319,36 @@ return cljs.core.reduce_kv((function (m,k,v){
 return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,k,cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.first,v));
 }),cljs.core.PersistentArrayMap.EMPTY,cljs.core.group_by(cljs.core.second,conns));
 });
-posh.core.after_transact = (function posh$core$after_transact(p__66564,conns_results){
-var map__66565 = p__66564;
-var map__66565__$1 = (((((!((map__66565 == null))))?(((((map__66565.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66565.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66565):map__66565);
-var posh_tree = map__66565__$1;
-var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66565__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66565__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var dbs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66565__$1,new cljs.core.Keyword(null,"dbs","dbs",1889628467));
-var filters = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66565__$1,new cljs.core.Keyword(null,"filters","filters",974726919));
-var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66565__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
-var new_dbs = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.merge,(function (){var iter__4582__auto__ = (function posh$core$after_transact_$_iter__66567(s__66568){
+posh.core.after_transact = (function posh$core$after_transact(p__37923,conns_results){
+var map__37924 = p__37923;
+var map__37924__$1 = (((((!((map__37924 == null))))?(((((map__37924.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37924.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37924):map__37924);
+var posh_tree = map__37924__$1;
+var conns = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37924__$1,new cljs.core.Keyword(null,"conns","conns",-1475268193));
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37924__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var dbs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37924__$1,new cljs.core.Keyword(null,"dbs","dbs",1889628467));
+var filters = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37924__$1,new cljs.core.Keyword(null,"filters","filters",974726919));
+var cache = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37924__$1,new cljs.core.Keyword(null,"cache","cache",-1237023054));
+var new_dbs = cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.merge,(function (){var iter__4582__auto__ = (function posh$core$after_transact_$_iter__37926(s__37927){
 return (new cljs.core.LazySeq(null,(function (){
-var s__66568__$1 = s__66568;
+var s__37927__$1 = s__37927;
 while(true){
-var temp__5735__auto__ = cljs.core.seq(s__66568__$1);
+var temp__5735__auto__ = cljs.core.seq(s__37927__$1);
 if(temp__5735__auto__){
-var s__66568__$2 = temp__5735__auto__;
-if(cljs.core.chunked_seq_QMARK_(s__66568__$2)){
-var c__4580__auto__ = cljs.core.chunk_first(s__66568__$2);
+var s__37927__$2 = temp__5735__auto__;
+if(cljs.core.chunked_seq_QMARK_(s__37927__$2)){
+var c__4580__auto__ = cljs.core.chunk_first(s__37927__$2);
 var size__4581__auto__ = cljs.core.count(c__4580__auto__);
-var b__66570 = cljs.core.chunk_buffer(size__4581__auto__);
-if((function (){var i__66569 = (0);
+var b__37929 = cljs.core.chunk_buffer(size__4581__auto__);
+if((function (){var i__37928 = (0);
 while(true){
-if((i__66569 < size__4581__auto__)){
-var vec__66571 = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4580__auto__,i__66569);
-var db_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__66571,(0),null);
-var conn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__66571,(1),null);
-cljs.core.chunk_append(b__66570,(cljs.core.truth_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn))?cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,posh.lib.db.generate_initial_db.cljs$core$IFn$_invoke$arity$4(dcfg,conn,cljs.core.get.cljs$core$IFn$_invoke$arity$2(filters,db_id),new cljs.core.Keyword(null,"db-after","db-after",-571884666).cljs$core$IFn$_invoke$arity$1(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn)))]):cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,cljs.core.get.cljs$core$IFn$_invoke$arity$2(dbs,db_id)])));
+if((i__37928 < size__4581__auto__)){
+var vec__37930 = cljs.core._nth.cljs$core$IFn$_invoke$arity$2(c__4580__auto__,i__37928);
+var db_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37930,(0),null);
+var conn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37930,(1),null);
+cljs.core.chunk_append(b__37929,(cljs.core.truth_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn))?cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,posh.lib.db.generate_initial_db.cljs$core$IFn$_invoke$arity$4(dcfg,conn,cljs.core.get.cljs$core$IFn$_invoke$arity$2(filters,db_id),new cljs.core.Keyword(null,"db-after","db-after",-571884666).cljs$core$IFn$_invoke$arity$1(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn)))]):cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,cljs.core.get.cljs$core$IFn$_invoke$arity$2(dbs,db_id)])));
 
-var G__66673 = (i__66569 + (1));
-i__66569 = G__66673;
+var G__37962 = (i__37928 + (1));
+i__37928 = G__37962;
 continue;
 } else {
 return true;
@@ -356,15 +356,15 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons(cljs.core.chunk(b__66570),posh$core$after_transact_$_iter__66567(cljs.core.chunk_rest(s__66568__$2)));
+return cljs.core.chunk_cons(cljs.core.chunk(b__37929),posh$core$after_transact_$_iter__37926(cljs.core.chunk_rest(s__37927__$2)));
 } else {
-return cljs.core.chunk_cons(cljs.core.chunk(b__66570),null);
+return cljs.core.chunk_cons(cljs.core.chunk(b__37929),null);
 }
 } else {
-var vec__66574 = cljs.core.first(s__66568__$2);
-var db_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__66574,(0),null);
-var conn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__66574,(1),null);
-return cljs.core.cons((cljs.core.truth_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn))?cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,posh.lib.db.generate_initial_db.cljs$core$IFn$_invoke$arity$4(dcfg,conn,cljs.core.get.cljs$core$IFn$_invoke$arity$2(filters,db_id),new cljs.core.Keyword(null,"db-after","db-after",-571884666).cljs$core$IFn$_invoke$arity$1(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn)))]):cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,cljs.core.get.cljs$core$IFn$_invoke$arity$2(dbs,db_id)])),posh$core$after_transact_$_iter__66567(cljs.core.rest(s__66568__$2)));
+var vec__37933 = cljs.core.first(s__37927__$2);
+var db_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37933,(0),null);
+var conn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37933,(1),null);
+return cljs.core.cons((cljs.core.truth_(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn))?cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,posh.lib.db.generate_initial_db.cljs$core$IFn$_invoke$arity$4(dcfg,conn,cljs.core.get.cljs$core$IFn$_invoke$arity$2(filters,db_id),new cljs.core.Keyword(null,"db-after","db-after",-571884666).cljs$core$IFn$_invoke$arity$1(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn)))]):cljs.core.PersistentArrayMap.createAsIfByAssoc([db_id,cljs.core.get.cljs$core$IFn$_invoke$arity$2(dbs,db_id)])),posh$core$after_transact_$_iter__37926(cljs.core.rest(s__37927__$2)));
 }
 } else {
 return null;
@@ -376,10 +376,10 @@ break;
 return iter__4582__auto__(conns);
 })());
 var new_posh_tree = cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(posh_tree,new cljs.core.Keyword(null,"dbs","dbs",1889628467),new_dbs);
-var changed_cache = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (changed,p__66577){
-var vec__66578 = p__66577;
-var db_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__66578,(0),null);
-var conn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__66578,(1),null);
+var changed_cache = cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (changed,p__37936){
+var vec__37937 = p__37936;
+var db_id = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37937,(0),null);
+var conn = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__37937,(1),null);
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([changed,posh.core.cache_changes(new_posh_tree,db_id,new cljs.core.Keyword(null,"tx-data","tx-data",934159761).cljs$core$IFn$_invoke$arity$1(cljs.core.get.cljs$core$IFn$_invoke$arity$2(conns_results,conn)),changed,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"db","db",993250759),db_id], null))], 0));
 }),cljs.core.PersistentArrayMap.EMPTY,conns);
 var really_changed = cljs.core.reduce_kv((function (m,k,v){
@@ -391,15 +391,15 @@ return m;
 }),cljs.core.PersistentArrayMap.EMPTY,changed_cache);
 return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new_posh_tree,new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"cache","cache",-1237023054),cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cache,really_changed], 0)),new cljs.core.Keyword(null,"changed","changed",570724917),really_changed], null)], 0));
 });
-posh.core.process_tx_BANG_ = (function posh$core$process_tx_BANG_(p__66581){
-var map__66582 = p__66581;
-var map__66582__$1 = (((((!((map__66582 == null))))?(((((map__66582.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__66582.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__66582):map__66582);
-var posh_tree = map__66582__$1;
-var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66582__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
-var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__66582__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
+posh.core.process_tx_BANG_ = (function posh$core$process_tx_BANG_(p__37940){
+var map__37941 = p__37940;
+var map__37941__$1 = (((((!((map__37941 == null))))?(((((map__37941.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__37941.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__37941):map__37941);
+var posh_tree = map__37941__$1;
+var dcfg = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37941__$1,new cljs.core.Keyword(null,"dcfg","dcfg",-880371016));
+var txs = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__37941__$1,new cljs.core.Keyword(null,"txs","txs",2056038378));
 var conns_results = cljs.core.reduce_kv((function (m,conn,tx){
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,conn,(function (){var fexpr__66584 = new cljs.core.Keyword(null,"transact!","transact!",-822725810).cljs$core$IFn$_invoke$arity$1(dcfg);
-return (fexpr__66584.cljs$core$IFn$_invoke$arity$2 ? fexpr__66584.cljs$core$IFn$_invoke$arity$2(conn,tx) : fexpr__66584.call(null,conn,tx));
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(m,conn,(function (){var fexpr__37943 = new cljs.core.Keyword(null,"transact!","transact!",-822725810).cljs$core$IFn$_invoke$arity$1(dcfg);
+return (fexpr__37943.cljs$core$IFn$_invoke$arity$2 ? fexpr__37943.cljs$core$IFn$_invoke$arity$2(conn,tx) : fexpr__37943.call(null,conn,tx));
 })());
 }),cljs.core.PersistentArrayMap.EMPTY,txs);
 return posh.core.after_transact(cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(posh_tree,new cljs.core.Keyword(null,"txs","txs",2056038378),cljs.core.PersistentArrayMap.EMPTY),conns_results);
