@@ -346,12 +346,12 @@ throw cljs.core.missing_protocol("IntoString.into-string",_);
 
 goog.object.set(reitit.impl.IntoString,"string",true);
 
-var G__49838_49870 = reitit.impl.into_string;
-var G__49839_49871 = "string";
-var G__49840_49872 = (function (this$){
+var G__49838_49869 = reitit.impl.into_string;
+var G__49839_49870 = "string";
+var G__49840_49871 = (function (this$){
 return this$;
 });
-goog.object.set(G__49838_49870,G__49839_49871,G__49840_49872);
+goog.object.set(G__49838_49869,G__49839_49870,G__49840_49871);
 
 (cljs.core.Keyword.prototype.reitit$impl$IntoString$ = cljs.core.PROTOCOL_SENTINEL);
 
@@ -363,30 +363,30 @@ return [ns,(cljs.core.truth_(ns)?"/":null),cljs.core.name(this$__$1)].join('');
 
 goog.object.set(reitit.impl.IntoString,"boolean",true);
 
-var G__49841_49873 = reitit.impl.into_string;
-var G__49842_49874 = "boolean";
-var G__49843_49875 = (function (this$){
+var G__49841_49872 = reitit.impl.into_string;
+var G__49842_49873 = "boolean";
+var G__49843_49874 = (function (this$){
 return cljs.core.str.cljs$core$IFn$_invoke$arity$1(this$);
 });
-goog.object.set(G__49841_49873,G__49842_49874,G__49843_49875);
+goog.object.set(G__49841_49872,G__49842_49873,G__49843_49874);
 
 goog.object.set(reitit.impl.IntoString,"number",true);
 
-var G__49844_49876 = reitit.impl.into_string;
-var G__49845_49877 = "number";
-var G__49846_49878 = (function (this$){
+var G__49844_49875 = reitit.impl.into_string;
+var G__49845_49876 = "number";
+var G__49846_49877 = (function (this$){
 return cljs.core.str.cljs$core$IFn$_invoke$arity$1(this$);
 });
-goog.object.set(G__49844_49876,G__49845_49877,G__49846_49878);
+goog.object.set(G__49844_49875,G__49845_49876,G__49846_49877);
 
 goog.object.set(reitit.impl.IntoString,"object",true);
 
-var G__49847_49879 = reitit.impl.into_string;
-var G__49848_49880 = "object";
-var G__49849_49881 = (function (this$){
+var G__49847_49878 = reitit.impl.into_string;
+var G__49848_49879 = "object";
+var G__49849_49880 = (function (this$){
 return cljs.core.str.cljs$core$IFn$_invoke$arity$1(this$);
 });
-goog.object.set(G__49847_49879,G__49848_49880,G__49849_49881);
+goog.object.set(G__49847_49878,G__49848_49879,G__49849_49880);
 
 goog.object.set(reitit.impl.IntoString,"null",true);
 

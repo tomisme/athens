@@ -236,14 +236,14 @@ return cljs.core.flush();
 });
 debux.common.util.form_header = (function debux$common$util$form_header(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___46070 = arguments.length;
-var i__4790__auto___46071 = (0);
+var len__4789__auto___46071 = arguments.length;
+var i__4790__auto___46072 = (0);
 while(true){
-if((i__4790__auto___46071 < len__4789__auto___46070)){
-args__4795__auto__.push((arguments[i__4790__auto___46071]));
+if((i__4790__auto___46072 < len__4789__auto___46071)){
+args__4795__auto__.push((arguments[i__4790__auto___46072]));
 
-var G__46072 = (i__4790__auto___46071 + (1));
-i__4790__auto___46071 = G__46072;
+var G__46073 = (i__4790__auto___46072 + (1));
+i__4790__auto___46072 = G__46073;
 continue;
 } else {
 }
@@ -457,8 +457,8 @@ while (G__46093__i < G__46093__a.length) {G__46093__a[G__46093__i] = arguments[G
 } 
 return G__46092__delegate.call(this,arg);};
 G__46092.cljs$lang$maxFixedArity = 0;
-G__46092.cljs$lang$applyTo = (function (arglist__46094){
-var arg = cljs.core.seq(arglist__46094);
+G__46092.cljs$lang$applyTo = (function (arglist__46096){
+var arg = cljs.core.seq(arglist__46096);
 return G__46092__delegate(arg);
 });
 G__46092.cljs$core$IFn$_invoke$arity$variadic = G__46092__delegate;
@@ -483,17 +483,17 @@ if(clojure.zip.end_QMARK_(loc)){
 return clojure.zip.root(loc);
 } else {
 if(((cljs.core.seq_QMARK_(node)) && (((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(d_sym,cljs.core.first(node))) || (debux.common.util.debux_skip_symbol_QMARK_(cljs.core.first(node))) || (debux.common.util.spy_first_QMARK_(cljs.core.first(node))))))){
-var G__46095 = clojure.zip.replace(loc,debux.common.util.third(node));
-loc = G__46095;
+var G__46103 = clojure.zip.replace(loc,debux.common.util.third(node));
+loc = G__46103;
 continue;
 } else {
 if(((cljs.core.seq_QMARK_(node)) && (cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(new cljs.core.Symbol("debux.common.util","spy-last","debux.common.util/spy-last",321778494,null),cljs.core.first(node))))){
-var G__46096 = clojure.zip.replace(loc,cljs.core.last(node));
-loc = G__46096;
+var G__46104 = clojure.zip.replace(loc,cljs.core.last(node));
+loc = G__46104;
 continue;
 } else {
-var G__46097 = clojure.zip.next(loc);
-loc = G__46097;
+var G__46105 = clojure.zip.next(loc);
+loc = G__46105;
 continue;
 
 }
