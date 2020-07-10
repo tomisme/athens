@@ -7,6 +7,7 @@
     [athens.devcards.blocks]
     [athens.devcards.breadcrumbs]
     [athens.devcards.buttons]
+    [athens.devcards.composable-blocks]
     [athens.devcards.daily-notes]
     [athens.devcards.db]
     [athens.devcards.db-boxes]
