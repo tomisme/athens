@@ -462,7 +462,7 @@
                          :id          (str "editable-uid-" uid)
                          :on-change   (fn [_] (db-on-change (:atom-string @state) uid))
                          :on-key-down (fn [e] (on-key-down e uid state))}]
-     [parse-and-render string]
+     (parse-and-render string)
      ;; don't show drop indicator when dragging to its children
      (when (and (empty? children) (not (:dragging @state)))
        [:div.drag-n-drop (use-style (merge {:height "2px"}

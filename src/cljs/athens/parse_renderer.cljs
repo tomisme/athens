@@ -3,27 +3,11 @@
     [athens.db :as db]
     [athens.parser :as parser]
     [athens.router :refer [navigate-uid]]
+    [athens.sci :refer [sci-block?]]
     [athens.style :refer [color OPACITIES]]
-    [clojure.string :as str]
     [instaparse.core :as insta]
     [posh.reagent :refer [pull #_q]]
-    [sci.core :as sci]
     [stylefy.core :as stylefy :refer [use-style]]))
-
-
-;; not the right place for this, just hacking for now
-
-(defn sci-block?
-  [{:keys [block/string]}]
-  (when string (str/starts-with? string ":sci")))
-
-(defn eval-sci-block
-  [{:keys [block/string]} context]
-  (let [code (subs string 4)]
-    (try
-      (sci/eval-string code {:bindings {'*1 context}})
-      (catch js/Error e
-        e))))
 
 
 (declare parse-and-render)
@@ -89,12 +73,12 @@
                      [:span {:on-click (fn [e] (navigate-uid (:block/uid @node) e))} title]
                      [:span {:class "formatting"} "]]"]]))
      :block-ref (fn [uid]
-                  (let [block @(pull db/dsdb '[*] [:block/uid uid])]
-                    (if (sci-block? block)
-                      [:span
-                       (eval-sci-block block {})]
+                  (let [block (pull db/dsdb '[*] [:block/uid uid])
+                        string (:block/string @block)]
+                    (if (sci-block? @block)
+                      [:athens/sci-modifier string]
                       [:span (use-style block-ref {:class "block-ref"})
-                       [:span {:class "contents" :on-click #(navigate-uid uid)} (parse-and-render (:block/string block))]])))
+                       [:span {:class "contents" :on-click #(navigate-uid uid)} (parse-and-render string)]])))
      :hashtag   (fn [tag-name]
                   (let [node (pull db/dsdb '[*] [:node/title tag-name])]
                     [:span (use-style hashtag) {:class    "hashtag"
@@ -123,4 +107,4 @@
        {:title (pr-str (insta/get-failure result))
         :style {:color "red"}}
        string]
-      [vec (transform result)])))
+      (vec (transform result)))))
