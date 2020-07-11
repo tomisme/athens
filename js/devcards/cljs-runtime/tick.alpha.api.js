@@ -804,14 +804,14 @@ return tick.alpha.api._GT_.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(argum
 break;
 default:
 var args_arr__4810__auto__ = [];
-var len__4789__auto___55617 = arguments.length;
-var i__4790__auto___55618 = (0);
+var len__4789__auto___55616 = arguments.length;
+var i__4790__auto___55617 = (0);
 while(true){
-if((i__4790__auto___55618 < len__4789__auto___55617)){
-args_arr__4810__auto__.push((arguments[i__4790__auto___55618]));
+if((i__4790__auto___55617 < len__4789__auto___55616)){
+args_arr__4810__auto__.push((arguments[i__4790__auto___55617]));
 
-var G__55619 = (i__4790__auto___55618 + (1));
-i__4790__auto___55618 = G__55619;
+var G__55619 = (i__4790__auto___55617 + (1));
+i__4790__auto___55617 = G__55619;
 continue;
 } else {
 }

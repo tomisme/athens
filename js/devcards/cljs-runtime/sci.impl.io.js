@@ -98,12 +98,12 @@ return sci.impl.io.prn.cljs$core$IFn$_invoke$arity$variadic(argseq__4796__auto__
 });
 
 (sci.impl.io.prn.cljs$core$IFn$_invoke$arity$variadic = (function (objs){
-var _STAR_print_length_STAR__orig_val__58380 = cljs.core._STAR_print_length_STAR_;
-var _STAR_print_length_STAR__temp_val__58381 = cljs.core.deref(sci.impl.io.print_length);
-(cljs.core._STAR_print_length_STAR_ = _STAR_print_length_STAR__temp_val__58381);
+var _STAR_print_length_STAR__orig_val__58382 = cljs.core._STAR_print_length_STAR_;
+var _STAR_print_length_STAR__temp_val__58383 = cljs.core.deref(sci.impl.io.print_length);
+(cljs.core._STAR_print_length_STAR_ = _STAR_print_length_STAR__temp_val__58383);
 
 try{return cljs.core.deref(sci.impl.io.out).append(cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.prn_str,objs));
-}finally {(cljs.core._STAR_print_length_STAR_ = _STAR_print_length_STAR__orig_val__58380);
+}finally {(cljs.core._STAR_print_length_STAR_ = _STAR_print_length_STAR__orig_val__58382);
 }}));
 
 (sci.impl.io.prn.cljs$lang$maxFixedArity = (0));
@@ -190,14 +190,14 @@ return self__4777__auto__.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq(seq
 
 sci.impl.io.with_out_str = (function sci$impl$io$with_out_str(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___58407 = arguments.length;
-var i__4790__auto___58408 = (0);
+var len__4789__auto___58408 = arguments.length;
+var i__4790__auto___58409 = (0);
 while(true){
-if((i__4790__auto___58408 < len__4789__auto___58407)){
-args__4795__auto__.push((arguments[i__4790__auto___58408]));
+if((i__4790__auto___58409 < len__4789__auto___58408)){
+args__4795__auto__.push((arguments[i__4790__auto___58409]));
 
-var G__58410 = (i__4790__auto___58408 + (1));
-i__4790__auto___58408 = G__58410;
+var G__58410 = (i__4790__auto___58409 + (1));
+i__4790__auto___58409 = G__58410;
 continue;
 } else {
 }

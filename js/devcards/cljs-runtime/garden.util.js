@@ -384,14 +384,14 @@ return ((x__4273__auto__ > y__4274__auto__) ? x__4273__auto__ : y__4274__auto__)
  */
 garden.util.average = (function garden$util$average(var_args){
 var args__4795__auto__ = [];
-var len__4789__auto___33018 = arguments.length;
-var i__4790__auto___33019 = (0);
+var len__4789__auto___33019 = arguments.length;
+var i__4790__auto___33020 = (0);
 while(true){
-if((i__4790__auto___33019 < len__4789__auto___33018)){
-args__4795__auto__.push((arguments[i__4790__auto___33019]));
+if((i__4790__auto___33020 < len__4789__auto___33019)){
+args__4795__auto__.push((arguments[i__4790__auto___33020]));
 
-var G__33020 = (i__4790__auto___33019 + (1));
-i__4790__auto___33019 = G__33020;
+var G__33022 = (i__4790__auto___33020 + (1));
+i__4790__auto___33020 = G__33022;
 continue;
 } else {
 }
@@ -429,8 +429,8 @@ while(true){
 if((i__4790__auto___33024 < len__4789__auto___33023)){
 args__4795__auto__.push((arguments[i__4790__auto___33024]));
 
-var G__33025 = (i__4790__auto___33024 + (1));
-i__4790__auto___33024 = G__33025;
+var G__33027 = (i__4790__auto___33024 + (1));
+i__4790__auto___33024 = G__33027;
 continue;
 } else {
 }

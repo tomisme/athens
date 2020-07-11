@@ -43,8 +43,8 @@ re_frame.core.clear_cofx = cljs.core.partial.cljs$core$IFn$_invoke$arity$2(re_fr
  * chain.
  */
 re_frame.core.reg_event_db = (function re_frame$core$reg_event_db(var_args){
-var G__46931 = arguments.length;
-switch (G__46931) {
+var G__46930 = arguments.length;
+switch (G__46930) {
 case 2:
 return re_frame.core.reg_event_db.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
 
@@ -307,11 +307,11 @@ return re_frame.core.register_handler.cljs$core$IFn$_invoke$arity$variadic(argse
 });
 
 (re_frame.core.register_handler.cljs$core$IFn$_invoke$arity$variadic = (function (args){
-var G__46952_46994 = new cljs.core.Keyword(null,"warn","warn",-436710552);
-var G__46953_46995 = "re-frame:  \"register-handler\" has been renamed \"reg-event-db\" (look for registration of";
-var G__46954_46996 = cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.first(args));
-var G__46955_46997 = ")";
-(re_frame.core.console.cljs$core$IFn$_invoke$arity$4 ? re_frame.core.console.cljs$core$IFn$_invoke$arity$4(G__46952_46994,G__46953_46995,G__46954_46996,G__46955_46997) : re_frame.core.console.call(null,G__46952_46994,G__46953_46995,G__46954_46996,G__46955_46997));
+var G__46953_46994 = new cljs.core.Keyword(null,"warn","warn",-436710552);
+var G__46954_46995 = "re-frame:  \"register-handler\" has been renamed \"reg-event-db\" (look for registration of";
+var G__46955_46996 = cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.first(args));
+var G__46956_46997 = ")";
+(re_frame.core.console.cljs$core$IFn$_invoke$arity$4 ? re_frame.core.console.cljs$core$IFn$_invoke$arity$4(G__46953_46994,G__46954_46995,G__46955_46996,G__46956_46997) : re_frame.core.console.call(null,G__46953_46994,G__46954_46995,G__46955_46996,G__46956_46997));
 
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$2(re_frame.core.reg_event_db,args);
 }));

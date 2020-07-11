@@ -295,10 +295,10 @@ var pattern = new cljs.core.Keyword(null,"pattern","pattern",242135423).cljs$cor
 var new_frames = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(frames,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(frame,new cljs.core.Keyword(null,"specs","specs",1426570741),cljs.core.rest(specs)));
 return datascript.pull_api.pull_attr(db,spec,cljs.core.first(eids),new_frames);
 } else {
-var G__26270 = db;
-var G__26271 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(frames,datascript.pull_api.reset_frame(frame,cljs.core.rest(eids),cljs.core.not_empty(cljs.core.persistent_BANG_(new cljs.core.Keyword(null,"kvps","kvps",65308317).cljs$core$IFn$_invoke$arity$1(frame)))));
-db = G__26270;
-p__26254 = G__26271;
+var G__26267 = db;
+var G__26268 = cljs.core.conj.cljs$core$IFn$_invoke$arity$2(frames,datascript.pull_api.reset_frame(frame,cljs.core.rest(eids),cljs.core.not_empty(cljs.core.persistent_BANG_(new cljs.core.Keyword(null,"kvps","kvps",65308317).cljs$core$IFn$_invoke$arity$1(frame)))));
+db = G__26267;
+p__26254 = G__26268;
 continue;
 }
 }
@@ -314,26 +314,26 @@ var G__26258 = new cljs.core.Keyword(null,"state","state",-1988618099).cljs$core
 var G__26258__$1 = (((G__26258 instanceof cljs.core.Keyword))?G__26258.fqn:null);
 switch (G__26258__$1) {
 case "expand":
-var G__26273 = db;
-var G__26274 = datascript.pull_api.pull_expand_frame(db,frames);
-db = G__26273;
-frames = G__26274;
+var G__26270 = db;
+var G__26271 = datascript.pull_api.pull_expand_frame(db,frames);
+db = G__26270;
+frames = G__26271;
 continue;
 
 break;
 case "expand-rev":
-var G__26275 = db;
-var G__26276 = datascript.pull_api.pull_expand_reverse_frame(db,frames);
-db = G__26275;
-frames = G__26276;
+var G__26272 = db;
+var G__26273 = datascript.pull_api.pull_expand_reverse_frame(db,frames);
+db = G__26272;
+frames = G__26273;
 continue;
 
 break;
 case "pattern":
-var G__26277 = db;
-var G__26278 = datascript.pull_api.pull_pattern_frame(db,frames);
-db = G__26277;
-frames = G__26278;
+var G__26274 = db;
+var G__26275 = datascript.pull_api.pull_pattern_frame(db,frames);
+db = G__26274;
+frames = G__26275;
 continue;
 
 break;
